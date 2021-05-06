@@ -1,0 +1,23 @@
+
+nav{
+margin: 20px;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+.input{
+margin-right:75%
+
+}
+#search{
+    display:flex;
+    justify-content: center;
+    padding-right:25%;
+    padding-left:25%;
+}
+.button {
+  border-radius: 50px;
+  
+}
