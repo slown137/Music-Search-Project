@@ -1,10 +1,7 @@
 
 
 
-svg { /* what is this */
-  width: 20px;
-  height: 20px;
-}
+
 
 .input{
 margin-right:75%
@@ -13,7 +10,7 @@ margin-right:75%
 #search{
     /* justify-content: center; */
     margin-top: 20%;
-    margin-left: -51%;
+    margin-left: -102%;
 }
 
 h1{
