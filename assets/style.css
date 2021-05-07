@@ -1,7 +1,5 @@
 
-nav{
-margin: 20px;
-}
+
 
 svg {
   width: 20px;
@@ -14,10 +12,7 @@ margin-right:75%
 #search{
     display:flex;
     justify-content: center;
+    margin-top: 25px;
     padding-right:25%;
     padding-left:25%;
-}
-.button {
-  border-radius: 50px;
-  
 }
