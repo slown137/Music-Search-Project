@@ -11,6 +11,7 @@ $(function() {
   
   var input = document.getElementById("input")
   var searchBtn = document.getElementById("searchBtn")
+  $("#music .save").val(localStorage.getItem("music"));
 
   $('#searchBtn').on('click', function(){
       var userInput = input.value
@@ -19,4 +20,14 @@ $(function() {
       console.log(searchArray);
       var searchParams = searchArray.join("%20");
       console.log(searchParams);
+      var text = $(this).siblings(".save").val();
+       console.log(text + " is stored")
+      var music = $(this).parent().attr("id");
+     
+      localStorage.setItem(music, text);
+      
+
   })
+
+  
+   
