@@ -9,4 +9,10 @@ $(function() {
     });
   });
   
-  
+  var input = document.getElementById("input")
+  var searchBtn = document.getElementById("searchBtn")
+
+  $('#searchBtn').on('click', function(){
+      var userInput = input.value
+      console.log(userInput);
+  })
