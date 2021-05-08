@@ -23,7 +23,6 @@ $(function() {
       var text = $(this).siblings(".save").val();
        console.log(text + " is stored")
       var music = $(this).parent().attr("id");
-     
       localStorage.setItem(music, text);
       
 
