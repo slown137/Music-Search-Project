@@ -9,14 +9,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
+
 </head>
 
 <body>
 
+
+
     <header class="sticky-shrinknav-header">
-        <h1 class="sticky-shrinknav-header-title">Music Search!</h1>
-        <section>
-            <div class="input-group searchbar" id="search">
+        
+        
+        <section class = "grid-x grid-padding-x align-center-middle text-center" style="height: 100px;">
+            <h1 class="sticky-shrinknav-header-title .align-self-top">Music Search!</h1>
+            <div class="input-group searchbar .align-self-middle"></div>
+                <div class="input-group-button">
+                </div>
+                <input class="input-field search-field" type="search" placeholder="Search for Music, Artist..." />
+                <a class="button" href="#">Search</a>
+            </div>
+           
+            <div class="input-group searchbar" id="nav">
                 <ul class="menu align-center sticky-shrinknav-menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Team</a></li>
@@ -24,15 +36,7 @@
                     <li><a href="#">Audio</a></li>
                 </ul>
             </div>
-            <div class="input-group searchbar" id="search">
-                <div class="input-group-button">
-                </div>
-                <input class="input-field search-field" type="search" placeholder="Search for Music, Artist..." />
-                <a class="button" href="#">Search</a>
-            </div>
         </section>
-
-
     </header>
     <main>
         <p id="instructions">Use the search bar below to look for your favorite artist and song! Be sure to use the correct
