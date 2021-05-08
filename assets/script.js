@@ -15,4 +15,8 @@ $(function() {
   $('#searchBtn').on('click', function(){
       var userInput = input.value
       console.log(userInput);
+      var searchArray = userInput.split(" ");
+      console.log(searchArray);
+      var searchParams = searchArray.join("%20");
+      console.log(searchParams);
   })
