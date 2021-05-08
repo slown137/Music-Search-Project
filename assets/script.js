@@ -20,12 +20,32 @@ var setParams = function(inputs) {
   console.log(searchArray);
   var searchParams = searchArray.join("%20");
   console.log(searchParams);
- 
+  return searchParams;
+ };
+
+var geniusSearch = function(searchData) {
+  const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://genius.p.rapidapi.com/search?q=" + searchData,
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-key": "ff5233b9b9mshd8cdfcef119429dp107763jsn3510bdb51ab2",
+      "x-rapidapi-host": "genius.p.rapidapi.com"
+    }
+  };
+  
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  });
 };
+
   $('#searchBtn').on('click', function(){
-    setParams(input);
+    geniusSearch(setParams(input));
     var text = $(this).siblings(".save").val();
     console.log(text + " is stored")
     var music = $(this).parent().attr("id");
     localStorage.setItem(music, text);
   });
+
+  
