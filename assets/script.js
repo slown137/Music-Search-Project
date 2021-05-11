@@ -24,8 +24,22 @@ var setParams = function(inputs) {
 };
   $('#searchBtn').on('click', function(){
     setParams(input);
-    var text = $(this).siblings(".save").val();
-    console.log(text + " is stored")
-    var music = $(this).parent().attr("id");
-    localStorage.setItem(music, text);
+    save();
+
   });
+
+  function save(){
+      var newSelection = input.value
+
+
+    if(localStorage.getItem('selection')== null){
+        localStorage.setItem('selection', '[]')
+    }
+
+    var oldSelection = JSON.parse(localStorage.getItem('selection'));
+    oldSelection.push(newSelection);
+
+    localStorage.setItem('selection', JSON.stringify(oldSelection));
+  }
+
+  
