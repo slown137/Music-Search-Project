@@ -36,22 +36,22 @@ const settings = {
   }
 };
 
-  $('#searchBtn').on('click', function(){
-    geniusSearch(setParams(input));
-    var text = $(this).siblings(".save").val();
-    console.log(text + " is stored")
-    var music = $(this).parent().attr("id");
-    localStorage.setItem(music, text);
+  // $('#searchBtn').on('click', function(){
+  //   geniusSearch(setParams(input));
+  //   var text = $(this).siblings(".save").val();
+  //   console.log(text + " is stored")
+  //   var music = $(this).parent().attr("id");
+  //   localStorage.setItem(music, text);
 
-  save();
+  // save();
   
-  });
+  // });
 
   
    
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  });
 };
 
 $('#searchBtn').on('click', function(){
@@ -97,3 +97,17 @@ if(clearBtn === null){
     document.getElementById('searchHistory').innerHTML = ""
   })
 };
+
+// fetch()
+//    .then(response => response.json())
+//    .then(artist => showCharacters(artist.results));
+
+//    showArtist = artist => {
+//     const artistDiv = document.querySelector( `artist`);
+//     artist.forEach(character => {
+//       const artistElement = document.createElement(`p`);
+//       characterElement.innerText = `Artist Name: ${artist.name}`;
+//       artistDiv.append(artistElement);
+//     });
+//   }
+
