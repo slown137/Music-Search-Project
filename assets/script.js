@@ -25,22 +25,46 @@ return searchParams;
 };
 
 var geniusSearch = function(searchData) {
-const settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://genius.p.rapidapi.com/search?q=" + searchData,
-  "method": "GET",
-  "headers": {
-    "x-rapidapi-key": "ff5233b9b9mshd8cdfcef119429dp107763jsn3510bdb51ab2",
-    "x-rapidapi-host": "genius.p.rapidapi.com"
-  }
-};
+  const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://genius.p.rapidapi.com/search?q=" + searchData,
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-key": "ff5233b9b9mshd8cdfcef119429dp107763jsn3510bdb51ab2",
+      "x-rapidapi-host": "genius.p.rapidapi.com"
+    }
+  };
 
-  
  $.ajax(settings).done(function (response) {
+  console.log("initial search:")
+  console.log("------------")
   console.log(response);
+  console.log(response.response.hits[0].result.api_path)
+  var songLink = response.response.hits[0].result.api_path
+  songSearch(songLink);
  });
 };
+
+var songSearch = function(apiLink) {
+  const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://genius.p.rapidapi.com/" + apiLink,
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-key": "ff5233b9b9mshd8cdfcef119429dp107763jsn3510bdb51ab2",
+      "x-rapidapi-host": "genius.p.rapidapi.com"
+    }
+  };
+  
+  $.ajax(settings).done(function (response) {
+    console.log("song search:")
+    console.log("------------")
+    console.log(response);
+  });
+}
+
 
 $('#searchBtn').on('click', function(){
   geniusSearch(setParams(input));
