@@ -39,6 +39,11 @@ const settings = {
   
  $.ajax(settings).done(function (response) {
   console.log(response);
+  var songResults = document.getElementById('songResults')
+  var songTitle = response['response']['hits'][0]['result']['full_title']
+  console.log(songTitle)
+
+  songResults.innerHTML = `${songTitle}`
  });
 };
 
