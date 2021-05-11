@@ -46,6 +46,38 @@ var geniusSearch = function(searchData) {
     console.log(text + " is stored")
     var music = $(this).parent().attr("id");
     localStorage.setItem(music, text);
+
+  saveSearches();
+  showSearches();
   });
+
+  
+  var recentSearches = [];
+
+  function saveSearches() {
+    localStorage.setItem("searches", JSON.stringify(recentSearches));
+  }
+  
+  function SearchList(){
+    $(".recentSearches").empty();
+    recentSearches.forEach(function(search) {
+        $(".recentSearches").prepend($(`<button class="list-group-item list-group-item-action searchesButton" data-city="${search}">${search}</button>`));
+    })
+}
+
+function init() {
+  var storeSearches = JSON.parse(localStorage.getItem("recentSearches"));
+  
+  if (storeSearches !== null) {
+    recentSearches = storeSearches;
+  }
+  
+  saveSearches();
+ 
+}
+  
+  
+  
+  init();
 
   
