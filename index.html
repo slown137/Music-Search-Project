@@ -27,6 +27,7 @@
                 <div id = "music">
                     <input class="save" id = "input" type="search" placeholder="Search for Music, Artist..."/>
                     <a class="button" href="#" id="searchBtn">Search</a>
+                    <a class="button" href="#" id="clearBtn">Clear History?</a>
                 </div>
             </div>
            
@@ -41,7 +42,7 @@
         </section>
     </header>
     <main>
-        <p id="instructions">Use the search bar below to look for your favorite artist and song! Be sure to use the correct
+        <p id="instructions">Use the search bar above to look for your favorite artist and song! Be sure to use the correct
             artist name followed by the song title, and press search!</p>
       <div class="callout" id="searches">
             <h5>This will display the recent searches</h5>
@@ -50,6 +51,10 @@
         <div class="callout">
             <h5>Your search results and lyrics will go here!</h5>
             <p>*awaiting input*</p>
+        </div>
+        <div id="history">
+            <ul id="searchHistory" class="list-group">
+              </ul>
         </div>
     </main>
 
