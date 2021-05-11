@@ -36,22 +36,10 @@ const settings = {
   }
 };
 
-  $('#searchBtn').on('click', function(){
-    geniusSearch(setParams(input));
-    var text = $(this).siblings(".save").val();
-    console.log(text + " is stored")
-    var music = $(this).parent().attr("id");
-    localStorage.setItem(music, text);
-
-  save();
   
-  });
-
-  
-   
-$.ajax(settings).done(function (response) {
+ $.ajax(settings).done(function (response) {
   console.log(response);
-});
+ });
 };
 
 $('#searchBtn').on('click', function(){
