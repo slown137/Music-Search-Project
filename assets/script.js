@@ -12,6 +12,7 @@ $(function() {
 var input = document.getElementById("input")
 var searchBtn = document.getElementById("searchBtn")
 var userHistory = JSON.parse(localStorage.getItem('selection'))
+var clearBtn = document.getElementById('clearBtn');
 
 var setParams = function(inputs) {
 var userInput = inputs.value
@@ -43,7 +44,6 @@ $.ajax(settings).done(function (response) {
 $('#searchBtn').on('click', function(){
   geniusSearch(setParams(input));
   save();
-  buildHistory();
 });
 
 function save(){
@@ -62,7 +62,7 @@ localStorage.setItem('selection', JSON.stringify(oldSelection));
 
 
 
-function buildHistory(){
+
 if(userHistory===null){
 
 }else{
@@ -74,4 +74,13 @@ if(userHistory===null){
     a.className += 'list-group-item';
     
   }
-}}
+}
+
+if(clearBtn === null){
+
+}else{
+  clearBtn.addEventListener('click',function(){
+    localStorage.clear();
+    document.getElementById('searchHistory').innerHTML = ""
+  })
+};
