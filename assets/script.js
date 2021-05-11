@@ -11,7 +11,7 @@ $(function() {
 
 var input = document.getElementById("input")
 var searchBtn = document.getElementById("searchBtn")
-$("#music .save").val(localStorage.getItem("music"));
+var userHistory = JSON.parse(localStorage.getItem('selection'))
 
 var setParams = function(inputs) {
 var userInput = inputs.value
@@ -43,6 +43,7 @@ $.ajax(settings).done(function (response) {
 $('#searchBtn').on('click', function(){
   geniusSearch(setParams(input));
   save();
+  buildHistory();
 });
 
 function save(){
@@ -61,3 +62,16 @@ localStorage.setItem('selection', JSON.stringify(oldSelection));
 
 
 
+function buildHistory(){
+if(userHistory===null){
+
+}else{
+  for (let index = 0; index < userHistory.length; index++) {
+    var a = document.createElement('li');
+    var b = document.createTextNode(`${userHistory[index]}`);
+    a.appendChild(b);
+    document.querySelector('.list-group').appendChild(a);
+    a.className += 'list-group-item';
+    
+  }
+}}
