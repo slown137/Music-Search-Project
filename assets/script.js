@@ -47,9 +47,40 @@ const settings = {
  });
 };
 
+var deezerSearch = function(deezerData){
+const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://deezerdevs-deezer.p.rapidapi.com/search?q=" + input.value,
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "65de35a1bamsh1f7acd97b19531ep117ad5jsn8557fcd005a4",
+		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+  var deezerPre = response['data'][0]['preview'];
+
+  var sound = document.createElement('audio');
+  sound.id = 'audio-player';
+  sound.controls = 'controls';
+  sound.src = deezerPre;
+  sound.type = 'audio/mpeg';
+  document.getElementById('song').appendChild(sound);
+
+
+
+  
+})
+};
+
+
 $('#searchBtn').on('click', function(){
   geniusSearch(setParams(input));
   save();
+  deezerSearch();
 });
 
 function save(){
