@@ -25,7 +25,7 @@
                 <div class="input-group-button">
                 </div>
                 <div id = "music">
-                    <input class="save" id = "input" type="search" placeholder="Search for Music, Artist..."/>
+                    <input class="save" id = "input" type="search" placeholder="Search for Music, Artist..."></input>
                     <a class="button" href="#" id="searchBtn">Search</a>
                     <a class="button" href="#" id="clearBtn">Clear History?</a>
                 </div>
@@ -44,19 +44,18 @@
     <main>
         <p id="instructions">Use the search bar above to look for your favorite artist and song! Be sure to use the correct
             artist name followed by the song title, and press search!</p>
-      <div class="callout" id="searches">
-            <h5>This will display the recent searches</h5>
-            <p>Recent search area</p> 
-            <ul id="searchHistory" class="list-group">
-              </ul>
+      <div class="callout" id="history">
+        <ul id="searchHistory" class="list-group">
+        </ul>
         </div>
         <div class="callout">
             <h5>Your search results and lyrics will go here!</h5>
-            <p class = "searchR">*awaiting input*</p>
+            <div><p>*awaiting input*</p>
+            <p id="songResults"></p>
         </div>
-        <div id="history">
-           
+
         </div>
+        
     </main>
 
     <footer class="footer">

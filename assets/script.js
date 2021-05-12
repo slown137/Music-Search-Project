@@ -36,22 +36,15 @@ const settings = {
   }
 };
 
-  // $('#searchBtn').on('click', function(){
-  //   geniusSearch(setParams(input));
-  //   var text = $(this).siblings(".save").val();
-  //   console.log(text + " is stored")
-  //   var music = $(this).parent().attr("id");
-  //   localStorage.setItem(music, text);
-
-  // save();
   
-  // });
+ $.ajax(settings).done(function (response) {
+  console.log(response);
+  var songResults = document.getElementById('songResults')
+  var songTitle = response['response']['hits'][0]['result']['full_title']
+  console.log(songTitle)
 
-  
-   
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-  });
+  songResults.innerHTML = `${songTitle}`
+ });
 };
 
 $('#searchBtn').on('click', function(){
