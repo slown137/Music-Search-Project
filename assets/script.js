@@ -13,15 +13,16 @@ var input = document.getElementById("input")
 var searchBtn = document.getElementById("searchBtn")
 var userHistory = JSON.parse(localStorage.getItem('selection'))
 var clearBtn = document.getElementById('clearBtn');
+var embedE1 = $('#forEmbed')
 
 var setParams = function(inputs) {
-var userInput = inputs.value
-console.log(userInput);
-var searchArray = userInput.split(" ");
-console.log(searchArray);
-var searchParams = searchArray.join("%20");
-console.log(searchParams);
-return searchParams;
+  var userInput = inputs.value
+  console.log(userInput);
+  var searchArray = userInput.split(" ");
+  console.log(searchArray);
+  var searchParams = searchArray.join("%20");
+  console.log(searchParams);
+  return searchParams;
 };
 
 var geniusSearch = function(searchData) {
@@ -59,12 +60,42 @@ var songSearch = function(apiLink) {
   };
   
   $.ajax(settings).done(function (response) {
-    console.log("song search:")
-    console.log("------------")
+    console.log("song search:");
+    console.log("------------");
     console.log(response);
+    console.log(response.response.song.embed_content);
+    var embedContent = response.response.song.embed_content;
+    var embedSplit = embedContent.split(" <script");
+    console.log(embedSplit);
+    embedE1.html(embedSplit[0]);
+
+    console.log(response.response.song.title)
+    var title = response.response.song.title
+    console.log(response.response.song.primary_artist.name)
+    var artist = response.response.song.primary_artist.name
+    lyricsApi(artist, title)
   });
 }
 
+var lyricsApi = function(artist, title) {
+  const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://api.lyrics.ovh/v1/" + artist + '/' + title,
+    "method": "GET"
+  };
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+    if (response.status != 404) {
+      var songLyrics = response.lyrics.replace(/\n/g, '<br />');
+      console.log(songLyrics)
+      $('#lyricsBox').html(songLyrics);
+    } else {
+      $('#lyricsBox').html("Lyrics not found! Try again or click link above!");
+    }
+
+  });
+}
 
 $('#searchBtn').on('click', function(){
   geniusSearch(setParams(input));
