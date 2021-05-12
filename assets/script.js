@@ -71,6 +71,8 @@ var oldSelection = JSON.parse(localStorage.getItem('selection'));
 oldSelection.push(newSelection);
 
 localStorage.setItem('selection', JSON.stringify(oldSelection));
+
+
 }
 
 
@@ -89,6 +91,21 @@ if(userHistory===null){
   }
 }
 
+if (userHistory > 5) {
+  var lastItem = $('#searchHistory li:last-child').html();
+  var nextItem = parseInt(lastItem) + 1;
+  $('#searchHistory').append('<li>' + nextItem + '</li>')
+  filterList();
+};
+
+function filterList() {
+  $("#searchHistory > li").not(":nth-last-of-type(-n+5)").remove();
+}
+
+filterList();
+
+
+
 if(clearBtn === null){
 
 }else{
@@ -96,18 +113,9 @@ if(clearBtn === null){
     localStorage.clear();
     document.getElementById('searchHistory').innerHTML = ""
   })
+  
 };
 
-// fetch()
-//    .then(response => response.json())
-//    .then(artist => showCharacters(artist.results));
 
-//    showArtist = artist => {
-//     const artistDiv = document.querySelector( `artist`);
-//     artist.forEach(character => {
-//       const artistElement = document.createElement(`p`);
-//       characterElement.innerText = `Artist Name: ${artist.name}`;
-//       artistDiv.append(artistElement);
-//     });
-//   }
 
+    
