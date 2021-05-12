@@ -130,10 +130,6 @@ var deezerSearch = function (deezerData) {
     sound.src = deezerPre;
     sound.type = 'audio/mpeg';
     document.getElementById('song').appendChild(sound);
-
-
-
-
   })
 };
 
@@ -160,9 +156,6 @@ function save() {
 
 }
 
-
-
-
 if (userHistory === null) {
 
 } else {
@@ -188,8 +181,6 @@ function filterList() {
 }
 
 filterList();
-
-
 
 if (clearBtn === null) {
 
