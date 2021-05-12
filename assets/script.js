@@ -82,18 +82,17 @@ var lyricsApi = function(artist, title) {
     "async": true,
     "crossDomain": true,
     "url": "https://api.lyrics.ovh/v1/" + artist + '/' + title,
-    "method": "GET"
+    "method": "GET",
+    "error" : function() {
+      $('#lyricsBox').html("Lyrics not found! Try again or click link above!");
+    }
   };
   $.ajax(settings).done(function (response) {
     console.log(response);
-    if (response.status != 404) {
-      var songLyrics = response.lyrics.replace(/\n/g, '<br />');
-      console.log(songLyrics)
-      $('#lyricsBox').html(songLyrics);
-    } else {
-      $('#lyricsBox').html("Lyrics not found! Try again or click link above!");
-    }
-
+    console.log(status);
+    var songLyrics = response.lyrics.replace(/\n/g, '<br />');
+    console.log(songLyrics);
+    $('#lyricsBox').html(songLyrics);
   });
 }
 
