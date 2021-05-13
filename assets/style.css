@@ -1,4 +1,33 @@
+#teamMembers ul{
+  list-style: none;
+}
+#teamMembers{
+  justify-content: center;
+}
+#wrapper{
+  background-image: url("https://thumbs.dreamstime.com/b/music-sheet-background-beauty-159457296.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    z-index: 0;
+}
+#headerLine{
+  background: darkgray;
+  padding: auto;
+  margin:auto
 
+}
+
+
+  #hero-section{
+  
+  background: url('https://i.pinimg.com/originals/5b/30/cf/5b30cfffef3f5a05460f73d8557d780e.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
 
 
 body {
@@ -31,7 +60,8 @@ margin-right:10%;
   max-width:68%;
   margin-top: -18.5%;
   background-color: transparent;
-
+ 
+  
  
 }
 .BTN1{
@@ -150,8 +180,19 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
 
 
 #instructions {
+  background-color: white;
+  font-size:x-large;
+  color: black;
+  font-weight: bold;
+  justify-content: center;
   margin-top: 50px;
+  margin-bottom: 50px;
   transition: all 1 ease;
+  border: solid;
+  border-color: black;
+  border-radius: 25%;
+  padding:25px;
+
 
 }
 audio{

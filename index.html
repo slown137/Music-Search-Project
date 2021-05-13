@@ -12,32 +12,22 @@
 
 </head>
 
-<body>
-    <header class="sticky-shrinknav-header">
+<body id="wrapper" class="align-center-middle"><a id="top"></a>
+    <header class="sticky-shrinknav-header" id="hero-section">
 
         <section class="grid-x grid-padding-x align-center-middle text-center" style="height: 100px;">
 
-            <h1 id="headerTop" class="sticky-shrinknav-header-title .align-self-top">Music Search!</h1>
+            <h1 class="sticky-shrinknav-header-title .align-self-top">Music Search!</h1>
 
-
-
-
-            <div id="topLinks">
-
-
-                <ul class="menu align-right sticky-shrinknav-menu" id = "stickyNav">
-                    <div class="input-group-button">
-                    </div>
-                    <li><a href="#headerTop">Home</a></li>
-                    <li id="teamClick"><a href="#teamMembers">Team</a></li>
-                    <li><a href="#lyricsBox">Lyrics</a></li>
-                    <li><a href="#song">Audio</a></li>
-                    <li></li>
-
-
-
-                </ul>
-                <div class="menu align-right sticky-shrinknav-menu">
+                <div id="headerLine" class="menu align-right sticky-shrinknav-menu">
+                    <ul class="menu align-right sticky-shrinknav-menu" id = "stickyNav">
+                        <div class="input-group-button">
+                        </div>
+                        <li><a href="#top">Home</a></li>
+                        <li id="teamClick"><a href="#teamMembers">Team</a></li>
+                        <li><a href="#lyricsBox">Lyrics</a></li>
+                        <li><a href="#song">Audio</a></li>
+                    </ul>
                     <div class="input-group searchbar"></div>
                     <div class="input-group-button">
                     </div>
@@ -48,13 +38,11 @@
                             <a class="button" href="#" id="searchBtn">Search</a>
                         </div>
                         <div class="BTN2">
-                            <a class="button" href="#" id="clearBtn">Clear History?</a>
+                            <a class="button" href="#" id="clearBtn">Clear</a>
                         </div>
-
                     </div>
 
                 </div>
-            </div>
         </section>
     </header>
     <main>
@@ -62,9 +50,10 @@
 
 
 
-        <p id="instructions">Use the search bar above to look for your favorite artist and song! Be sure to use the
-            correct
-            artist name followed by the song title, and press search!</p>
+        <div id="instructions">
+            <p>Use the search bar above to look for your favorite artist's songs! You'll get to see the full lyrics so you can sing along to the free 30 second preview! Feel like resetting and starting again? Just use the clear button above.</p>
+        </div>
+        
         <div class="callout" id="history">
             <h2>History</h2>
             <ul id="searchHistory" class="list-group">
@@ -85,8 +74,8 @@
 
             </div>
         </div>
-        <div id="teamMembers" hidden="true">
-            <div class="callout secondary">
+        <div class="row" id="teamMembers" hidden="true">
+            <div class="callout secondary twelve columns text-center">
                 <h5>Meet The Team That Made This Possible</h5>
                 <ul>
                     <li>Sara Lown, Github: slown137 </li>
