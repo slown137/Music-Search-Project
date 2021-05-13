@@ -144,7 +144,7 @@ $('#searchBtn').on('click', function () {
 });
 
 input.addEventListener("keydown", function(event) {
-  if (event.keyCode === 13) {
+  if (event.key === "Enter") {
     event.preventDefault();
     document.getElementById("searchBtn").click();
   }
