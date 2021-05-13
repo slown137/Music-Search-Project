@@ -143,6 +143,13 @@ $('#searchBtn').on('click', function () {
   deezerSearch();
 });
 
+input.addEventListener("keydown", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("searchBtn").click();
+  }
+});
+
 function save() {
   var newSelection = input.value
 
