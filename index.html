@@ -17,7 +17,7 @@
 
         <section class="grid-x grid-padding-x align-center-middle text-center" style="height: 100px;">
 
-            <h1 class="sticky-shrinknav-header-title .align-self-top">Music Search!</h1>
+            <h1 id="headerTop" class="sticky-shrinknav-header-title .align-self-top">Music Search!</h1>
 
 
 
@@ -28,10 +28,11 @@
                 <ul class="menu align-right sticky-shrinknav-menu" id = "stickyNav">
                     <div class="input-group-button">
                     </div>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Lyrics</a></li>
-                    <li><a href="#">Audio</a></li>
+                    <li><a href="#headerTop">Home</a></li>
+                    <li id="teamClick"><a href="#teamMembers">Team</a></li>
+                    <li><a href="#lyricsBox">Lyrics</a></li>
+                    <li><a href="#song">Audio</a></li>
+                    <li></li>
 
 
 
@@ -83,16 +84,24 @@
                 <p id="lyricsBox"></p>
 
             </div>
+        </div>
+        <div id="teamMembers" hidden="true">
+            <div class="callout secondary">
+                <h5>Meet The Team That Made This Possible</h5>
+                <ul>
+                    <li>Sara Lown, Github: slown137 </li>
+                    <li>Carletta Walls, Github: Carletta88 </li>
+                    <li>Tommy Fyle, Github: William7786 </li>
+                    <li>Luke Spang, Github: LukeSpang </li>
+                </ul>
+              </div>
+
+        </div>
+        
     </main>
 
     <footer class="footer">
         <div class="mobile-bottom-bar">
-            <a href="#" class="footer-link">
-                <i class="fa fa-cog"></i> <span class='footer-text'>Group Members</span>
-            </a>
-            <a href="#" class="footer-link">
-                <i class="fa fa-sign-out"></i> <span class='footer-text'>Reset</span>
-            </a>
         </div>
     </footer>
 

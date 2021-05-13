@@ -14,6 +14,7 @@ var searchBtn = document.getElementById("searchBtn")
 var userHistory = JSON.parse(localStorage.getItem('selection'))
 var clearBtn = document.getElementById('clearBtn');
 var embedE1 = $('#forEmbed')
+var teamClick =$('#teamClick')
 
 var setParams = function (inputs) {
   var userInput = inputs.value
@@ -191,9 +192,16 @@ if (clearBtn === null) {
   clearBtn.addEventListener('click', function () {
     localStorage.clear();
     document.getElementById('searchHistory').innerHTML = ""
+    let t = document.getElementById('teamMembers')
+    t.setAttribute('hidden', 'true')
   })
 
 };
+
+$('#teamClick').on('click',function(){
+  let t = document.getElementById('teamMembers')
+  t.removeAttribute('hidden')
+})
 
 
 
