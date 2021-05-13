@@ -135,6 +135,8 @@ var deezerSearch = function (deezerData) {
 
 
 $('#searchBtn').on('click', function () {
+  let p = document.getElementById('lyricsCard');
+  p.removeAttribute("hidden");
   geniusSearch(setParams(input));
   save();
   deezerSearch();

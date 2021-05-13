@@ -14,8 +14,11 @@
 
 <body>
     <header class="sticky-shrinknav-header">
+
         <section class="grid-x grid-padding-x align-center-middle text-center" style="height: 100px;">
+
             <h1 class="sticky-shrinknav-header-title .align-self-top">Music Search!</h1>
+
 
 
 
@@ -39,13 +42,13 @@
                     <div id="music">
                         <input class="save" id="input" type="search" placeholder="Search for Music, Artist...">
                         </input>
-                    <div class = "BTN1">
-                        <a class="button" href="#" id="searchBtn">Search</a>
-                    </div>
-                    <div class = "BTN2">
-                     <a class="button" href="#" id="clearBtn">Clear History?</a>   
-                    </div>
-                    
+                        <div class="BTN1">
+                            <a class="button" href="#" id="searchBtn">Search</a>
+                        </div>
+                        <div class="BTN2">
+                            <a class="button" href="#" id="clearBtn">Clear History?</a>
+                        </div>
+
                     </div>
 
                 </div>
@@ -61,20 +64,24 @@
             correct
             artist name followed by the song title, and press search!</p>
         <div class="callout" id="history">
+            <h2>History</h2>
             <ul id="searchHistory" class="list-group">
             </ul>
         </div>
-        <div class="callout lyricsCallout">
-            <h5>Your audio and lyrics will go here!</h5>
+        <div class="callout lyricsCallout" id = "lyricsCard" hidden = "true">
+            <h2>Your Audio</h2>
             <div>
                 <p id="songResults"></p>
                 <div class="audio" id="song"></div>
                 </audio>
             </div>
-        </div>
-        <div id="forEmbed"></div>
-        <p id="lyricsBox"></p>
-        </div>
+
+            <div>
+                <h2>Your Lyrics</h2>
+                <div id="forEmbed"></div>
+                <p id="lyricsBox"></p>
+
+            </div>
     </main>
 
     <footer class="footer">

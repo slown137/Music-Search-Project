@@ -1,20 +1,31 @@
+
+
+
 body {
   padding-top: 330px;
-
+  margin:10%;
+  
+ 
 }
+.top{
+  display: flex;
+  margin-bottom: 30%;
+}
+
 .menu input{
 max-width: 120%;
 margin-left: -190%;
 margin-top: -7%;
 display:flex;
 width:120%;
-
-
 }
 .button{
 background-color: transparent;
 margin-right:10%;
+
 }
+
+
 .BTN2{
   display: flex;
   max-width:68%;
@@ -34,7 +45,7 @@ margin-right:10%;
 
 .sticky-shrinknav-menu {
   position: absolute;
-  left: 50%;
+  left: 54%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -43,8 +54,8 @@ margin-right:10%;
   line-height: 3.75rem;
   width: 100%;
   background-color: rgba(23, 121, 186, 0.1);
-  transition: all 1.5s ease;
-  
+  transition: all 1s ease;
+ 
 }
 
 .sticky-shrinknav-menu li {
@@ -82,17 +93,27 @@ margin-right:10%;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #2196e3;
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
   overflow: hidden;
   transition: all 0.5s ease;
+  background: rgba(23, 121, 186, 0.9);
+  z-index: 2;
+}
+h2{
+text-align: center;
+}
+.callout{
+/* background-color: transparent; */
+padding-top:10%;
+padding-bottom: 10%;
+z-index: 1;
 }
 
 body.sticky-shrinknav-wrapper {
-  padding-top: 130px;
+  transition: all 1 ease;
   
 }
 
@@ -111,8 +132,21 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
 
 
 #instructions {
-  margin-top: 100px;
+  margin-top: 50px;
+  transition: all 1 ease;
+
 }
+audio{
+  margin-top: 2%;
+  margin-bottom:10%;
+}
+#lyricsCard{
+  flex-wrap: wrap;
+  text-align: center;
+  
+  
+}
+
 
 .mobile-bottom-bar {
   width: 100%;
@@ -166,6 +200,7 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
   bottom: 0;
   width: 100%;
   text-align: center;
+  z-index: 2;
 }
 
 .list-group {
