@@ -1,5 +1,35 @@
 body {
   padding-top: 330px;
+
+}
+.menu input{
+max-width: 120%;
+margin-left: -190%;
+margin-top: -7%;
+display:flex;
+width:120%;
+
+
+}
+.button{
+background-color: transparent;
+margin-right:10%;
+}
+.BTN2{
+  display: flex;
+  max-width:68%;
+  margin-top: -18.5%;
+ 
+}
+.BTN1{
+  display: flex;
+  max-width: 40%;
+  margin-left: -50%;
+  margin-top: -19%;
+  
+}
+.save{
+  margin-right: 50%;
 }
 
 .sticky-shrinknav-menu {
@@ -9,11 +39,12 @@ body {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   bottom: 0;
-  height: 3.75rem;
+  height: 2.90rem;
   line-height: 3.75rem;
   width: 100%;
   background-color: rgba(23, 121, 186, 0.1);
-  transition: all 0.5s ease;
+  transition: all 1.5s ease;
+  
 }
 
 .sticky-shrinknav-menu li {
@@ -62,6 +93,7 @@ body {
 
 body.sticky-shrinknav-wrapper {
   padding-top: 130px;
+  
 }
 
 body.sticky-shrinknav-wrapper .sticky-shrinknav-header {
@@ -75,6 +107,8 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
   transform: scale(0);
   transition: all 0.3s ease;
 }
+
+
 
 #instructions {
   margin-top: 100px;

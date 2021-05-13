@@ -176,6 +176,7 @@ if (userHistory > 5) {
   filterList();
 };
 
+
 function filterList() {
   $("#searchHistory > li").not(":nth-last-of-type(-n+5)").remove();
 }
