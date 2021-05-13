@@ -147,6 +147,13 @@ $('#searchBtn').on('click', function () {
   
 });
 
+input.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("searchBtn").click();
+  }
+});
+
 function save() {
   var newSelection = input.value
 
