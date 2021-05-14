@@ -62,6 +62,11 @@ background-color: transparent;
 margin-right:10%;
 
 }
+.button:hover{
+  background-color: transparent;
+  box-shadow: 0 0 0 1px #fefefe;
+  z-index: 2;
+}
 
 
 .BTN2{
@@ -89,6 +94,7 @@ margin-right:10%;
   border-radius: 2px;
   transition: all 0.3s ease;
   z-index: 2;
+  margin-bottom: -5px;
   
 }
 h1, h2, h3{
