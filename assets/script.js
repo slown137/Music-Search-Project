@@ -96,19 +96,6 @@ var lyricsApi = function(artist, title) {
   });
 }
 
-/* $('#searchBtn').on('click', function(){
-
-
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-    var songResults = document.getElementById('songResults')
-    var songTitle = response['response']['hits'][0]['result']['full_title']
-    console.log(songTitle)
-
-    songResults.innerHTML = `${songTitle}`
-  });
-}); */
-
 var deezerSearch = function (deezerData) {
   const settings = {
     "async": true,
@@ -173,11 +160,11 @@ if (userHistory === null) {
 
 } else {
   for (let index = 0; index < userHistory.length; index++) {
-    var a = document.createElement('button');
+    var a = document.createElement('li');
     var b = document.createTextNode(`${userHistory[index]}`);
     a.appendChild(b);
     document.querySelector('.list-group').appendChild(a);
-    a.className += 'list-group-item historyBtn';
+    a.className += 'list-group-item';
 
   }
 }

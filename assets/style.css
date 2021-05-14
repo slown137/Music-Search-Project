@@ -340,10 +340,6 @@ audio{
   background-color:rgb(191,136,123);
 }
 
-.list-group-item:hover.active, .list-group-item:focus.active {
-  /* background-color: #1779ba; */
-}
-
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus, .list-group-item[disabled], .list-group-item[disabled]:hover, .list-group-item[disabled]:focus {
   color: #8a8a8a;
   cursor: not-allowed;
