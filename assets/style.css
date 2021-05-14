@@ -177,7 +177,6 @@ box-shadow: 0 0 3px rgb(41, 40, 40);
   left: 0;
   overflow: hidden;
   transition: all 0.5s ease;
-  background: rgba(23, 121, 186, 0.9);
   z-index: 2;
 }
 h2{
@@ -193,7 +192,12 @@ z-index: 1;
 -webkit-box-shadow: 0 0 10px #ccc;
 box-shadow: 0 0 10px #ccc;
 border-radius: 10%;
-
+background-image: url("../assets/Img/images\ \(2\).jpg");
+background: 
+linear-gradient(
+  rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)
+),
 }
 
 body.sticky-shrinknav-wrapper {
@@ -203,7 +207,7 @@ body.sticky-shrinknav-wrapper {
 
 body.sticky-shrinknav-wrapper .sticky-shrinknav-header {
   height: 3.00rem;
-  background-color: rgba(23, 121, 186, 0.9);
+ 
 }
 
 body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-title {
@@ -216,7 +220,7 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
 
 
 #instructions {
-  background-color: white;
+  background-color:transparent;
   font-size:x-large;
   color: black;
   font-weight: bold;
@@ -232,8 +236,11 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
 -webkit-box-shadow: 0 0 10px #ccc;
 box-shadow: 0 0 10px #ccc;
 
-  
+background-image: url("../assets/Img/images\ \(2\).jpg");
+
 }
+
+
 audio{
   margin-top: 2%;
   margin-bottom:10%;
@@ -303,9 +310,7 @@ audio{
 
 .list-group {
   margin-bottom: 1rem;
-  border: 1px solid #e6e6e6;
   border-radius: 0;
-  background: #fefefe;
   box-shadow: none;
   overflow: hidden;
   color: #0a0a0a;
@@ -327,16 +332,12 @@ audio{
 
 .list-group-item.active {
   color: #fefefe;
-  background-color: #1779ba;
+  /* background-color: #1779ba; */
   border-color: 1px solid #1779ba;
 }
 
 .list-group-item:hover, .list-group-item:focus {
-  background-color: #e6e6e6;
-}
-
-.list-group-item:hover.active, .list-group-item:focus.active {
-  background-color: #1779ba;
+  background-color:rgb(191,136,123);
 }
 
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus, .list-group-item[disabled], .list-group-item[disabled]:hover, .list-group-item[disabled]:focus {
