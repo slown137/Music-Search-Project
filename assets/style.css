@@ -14,7 +14,8 @@
     z-index: 0;
 }
 #headerLine{
-  background: #914a3a;
+  background: rgb(191,136,123);
+  background: linear-gradient(49deg, rgba(191,136,123,1) 9%, rgba(145,74,58,1) 58%);
   padding: auto;
   margin:auto
 
