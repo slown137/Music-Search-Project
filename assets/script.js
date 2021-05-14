@@ -1,3 +1,4 @@
+//function for the sticky header
 $(function () {
   $(window).scroll(function () {
     var winTop = $(window).scrollTop();
@@ -8,14 +9,14 @@ $(function () {
     }
   });
 });
-
+//global variables
 var input = document.getElementById("input")
 var searchBtn = document.getElementById("searchBtn")
 var userHistory = JSON.parse(localStorage.getItem('selection'))
 var clearBtn = document.getElementById('clearBtn');
 var embedE1 = $('#forEmbed')
 var teamClick =$('#teamClick')
-
+//function for user input splitting, allows searches with multiple words
 var setParams = function (inputs) {
   var userInput = inputs.value
   console.log(userInput);
@@ -25,7 +26,7 @@ var setParams = function (inputs) {
   console.log(searchParams);
   return searchParams;
 };
-
+//genius API call for song information
 var geniusSearch = function (searchData) {
   const settings = {
     "async": true,
@@ -76,7 +77,7 @@ var songSearch = function(apiLink) {
     lyricsApi(artist, title)
   });
 }
-
+//lyric api call for song lyrics, populates to lyric container
 var lyricsApi = function(artist, title) {
   const settings = {
     "async": true,
@@ -95,7 +96,7 @@ var lyricsApi = function(artist, title) {
     $('#lyricsBox').html(songLyrics);
   });
 }
-
+//deezer api call, obtains 30 second song preview
 var deezerSearch = function () {
   const settings = {
     "async": true,
@@ -123,7 +124,7 @@ var deezerSearch = function () {
   })
 };
 
-
+//search button with all api calls
 $('#searchBtn').on('click', function () {
   let p = document.getElementById('lyricsCard');
   p.removeAttribute("hidden");
@@ -132,14 +133,14 @@ $('#searchBtn').on('click', function () {
   deezerSearch();
   
 });
-
+//allows user to use enter button the same as a button click
 input.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
     event.preventDefault();
     document.getElementById("searchBtn").click();
   }
 });
-
+//local storage
 function save() {
   var newSelection = input.value
 
@@ -155,7 +156,7 @@ function save() {
 
 
 }
-
+//adding local storage array to the history list
 if (userHistory === null) {
 
 } else {
@@ -168,7 +169,7 @@ if (userHistory === null) {
 
   }
 }
-
+//trims history to 5 searches
 if (userHistory > 5) {
   var lastItem = $('#searchHistory li:last-child').html();
   var nextItem = parseInt(lastItem) + 1;
@@ -182,7 +183,7 @@ function filterList() {
 }
 
 filterList();
-
+//clear button, deletes local storage
 if (clearBtn === null) {
 
 } else {
@@ -194,7 +195,7 @@ if (clearBtn === null) {
   })
 
 };
-
+//event listener for team information
 $('#teamClick').on('click',function(){
   let t = document.getElementById('teamMembers')
   t.removeAttribute('hidden')
