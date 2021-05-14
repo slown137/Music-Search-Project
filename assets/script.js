@@ -169,11 +169,7 @@ if (userHistory === null) {
   }
 }
 
-<<<<<<< HEAD
 if (userHistory > 5) {
-=======
-if (searchHistory > 5) {
->>>>>>> main
   var lastItem = $('#searchHistory li:last-child').html();
   var nextItem = parseInt(lastItem) + 1;
   $('#searchHistory').append('<li>' + nextItem + '</li>')
