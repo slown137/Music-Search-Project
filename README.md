@@ -20,7 +20,7 @@ Type in the artist and song you want into the search bar, press Enter, and enjoy
 
 ## Demo
 
-![gif of app](assets\Img\musicsearch.gif?raw=true)
+![gif of app](musicsearch.gif)
 
 ## Contributors:
 
