@@ -182,7 +182,7 @@ if (userHistory === null) {
   }
 }
 
-if (seachHistory > 5) {
+if (searchHistory > 5) {
   var lastItem = $('#searchHistory li:last-child').html();
   var nextItem = parseInt(lastItem) + 1;
   $('#searchHistory').append('<li>' + nextItem + '</li>')
