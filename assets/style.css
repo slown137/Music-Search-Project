@@ -194,7 +194,11 @@ z-index: 1;
 box-shadow: 0 0 10px #ccc;
 border-radius: 10%;
 background-image: url(../assets/Img/images\ \(2\).jpg);
-
+background: 
+linear-gradient(
+  rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)
+),
 }
 
 body.sticky-shrinknav-wrapper {
@@ -236,6 +240,7 @@ box-shadow: 0 0 10px #ccc;
 background-image: url(../assets/Img/images\ \(2\).jpg);
 
 }
+
 
 audio{
   margin-top: 2%;
