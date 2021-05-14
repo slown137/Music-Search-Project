@@ -173,11 +173,11 @@ if (userHistory === null) {
 
 } else {
   for (let index = 0; index < userHistory.length; index++) {
-    var a = document.createElement('button');
+    var a = document.createElement('li');
     var b = document.createTextNode(`${userHistory[index]}`);
     a.appendChild(b);
     document.querySelector('.list-group').appendChild(a);
-    a.className += 'list-group-item historyBtn';
+    a.className += 'list-group-item h';
 
   }
 }
