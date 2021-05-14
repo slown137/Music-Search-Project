@@ -193,6 +193,7 @@ z-index: 1;
 -webkit-box-shadow: 0 0 10px #ccc;
 box-shadow: 0 0 10px #ccc;
 border-radius: 10%;
+background-image: url(../assets/Img/images\ \(2\).jpg);
 
 }
 
@@ -216,7 +217,7 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
 
 
 #instructions {
-  background-color: white;
+  background-color:transparent;
   font-size:x-large;
   color: black;
   font-weight: bold;
@@ -232,8 +233,10 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
 -webkit-box-shadow: 0 0 10px #ccc;
 box-shadow: 0 0 10px #ccc;
 
-  
+background-image: url(../assets/Img/images\ \(2\).jpg);
+
 }
+
 audio{
   margin-top: 2%;
   margin-bottom:10%;
@@ -303,9 +306,7 @@ audio{
 
 .list-group {
   margin-bottom: 1rem;
-  border: 1px solid #e6e6e6;
   border-radius: 0;
-  background: #fefefe;
   box-shadow: none;
   overflow: hidden;
   color: #0a0a0a;
@@ -332,7 +333,7 @@ audio{
 }
 
 .list-group-item:hover, .list-group-item:focus {
-  background-color: #e6e6e6;
+  background-color:rgb(191,136,123);
 }
 
 .list-group-item:hover.active, .list-group-item:focus.active {
