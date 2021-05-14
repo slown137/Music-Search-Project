@@ -123,14 +123,16 @@ var deezerSearch = function (deezerData) {
 
   $.ajax(settings).done(function (response) {
     console.log(response);
-    var deezerPre = response['data'][0]['preview'];
 
-    var sound = document.createElement('audio');
-    sound.id = 'audio-player';
-    sound.controls = 'controls';
-    sound.src = deezerPre;
-    sound.type = 'audio/mpeg';
-    document.getElementById('song').appendChild(sound);
+    var deezerPre = response['data'][0]['preview'];
+    var audio = document.getElementById('audio');
+    
+    if (audio.getAttribute('src')===""){
+      audio.src = deezerPre
+    }  else {
+      audio.src = deezerPre
+    }
+
   })
 };
 
@@ -141,6 +143,7 @@ $('#searchBtn').on('click', function () {
   geniusSearch(setParams(input));
   save();
   deezerSearch();
+  
 });
 
 input.addEventListener("keydown", function(event) {
@@ -170,11 +173,11 @@ if (userHistory === null) {
 
 } else {
   for (let index = 0; index < userHistory.length; index++) {
-    var a = document.createElement('li');
+    var a = document.createElement('button');
     var b = document.createTextNode(`${userHistory[index]}`);
     a.appendChild(b);
     document.querySelector('.list-group').appendChild(a);
-    a.className += 'list-group-item';
+    a.className += 'list-group-item historyBtn';
 
   }
 }
@@ -209,6 +212,7 @@ $('#teamClick').on('click',function(){
   let t = document.getElementById('teamMembers')
   t.removeAttribute('hidden')
 })
+
 
 
 
