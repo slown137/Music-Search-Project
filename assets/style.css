@@ -177,7 +177,6 @@ box-shadow: 0 0 3px rgb(41, 40, 40);
   left: 0;
   overflow: hidden;
   transition: all 0.5s ease;
-  background: rgba(23, 121, 186, 0.9);
   z-index: 2;
 }
 h2{
@@ -208,7 +207,7 @@ body.sticky-shrinknav-wrapper {
 
 body.sticky-shrinknav-wrapper .sticky-shrinknav-header {
   height: 3.00rem;
-  background-color: rgba(23, 121, 186, 0.9);
+ 
 }
 
 body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-title {
@@ -333,7 +332,7 @@ audio{
 
 .list-group-item.active {
   color: #fefefe;
-  background-color: #1779ba;
+  /* background-color: #1779ba; */
   border-color: 1px solid #1779ba;
 }
 
@@ -342,7 +341,7 @@ audio{
 }
 
 .list-group-item:hover.active, .list-group-item:focus.active {
-  background-color: #1779ba;
+  /* background-color: #1779ba; */
 }
 
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus, .list-group-item[disabled], .list-group-item[disabled]:hover, .list-group-item[disabled]:focus {
