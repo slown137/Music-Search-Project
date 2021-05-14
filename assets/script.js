@@ -123,16 +123,15 @@ var deezerSearch = function (deezerData) {
 
   $.ajax(settings).done(function (response) {
     console.log(response);
-    var newSong = document.getElementById('newSong')
-    var songSpot = document.getElementById('song')
-    var deezerPre = response['data'][0]['preview'];
 
-    var sound = document.createElement('audio');
-    sound.id = 'audio-player';
-    sound.controls = 'controls';
-    sound.src = deezerPre;
-    sound.type = 'audio/mpeg';
-    document.getElementById('song').appendChild(sound);
+    var deezerPre = response['data'][0]['preview'];
+    var audio = document.getElementById('audio');
+    
+    if (audio.getAttribute('src')===""){
+      audio.src = deezerPre
+    }  else {
+      audio.src = deezerPre
+    }
 
   })
 };
@@ -213,4 +212,8 @@ $('#teamClick').on('click',function(){
   let t = document.getElementById('teamMembers')
   t.removeAttribute('hidden')
 })
+
+
+
+
 
