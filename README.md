@@ -18,6 +18,10 @@ https://slown137.github.io/Music-Search-Project/
 ## Usage: 
 Type in the artist and song you want into the search bar, press Enter, and enjoy the music!
 
+## Demo
+
+![gif of app](.\assets\Img\musicsearch.gif?raw=true)
+
 ## Contributors:
 
 Name | Github
